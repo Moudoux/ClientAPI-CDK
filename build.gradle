@@ -1,0 +1,45 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+    }
+
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+    }
+}
+apply plugin: 'java'
+apply plugin: 'net.minecraftforge.gradle.tweaker-client'
+
+version '1.0'
+group 'me.zero.example' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+
+sourceCompatibility = targetCompatibility = '1.8'
+compileJava {
+    sourceCompatibility = targetCompatibility = '1.8'
+}
+
+minecraft {
+    version = '1.11.2'
+    runDir = 'run'
+    tweakClass = 'me.zero.client.load.inject.ClientTweaker'
+    mappings = 'snapshot_20170215'
+
+    makeObfSourceJar = true
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'jitpack'
+        url = 'https://jitpack.io'
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'com.github.ZeroMemes:ClientAPI:-SNAPSHOT'
+}
