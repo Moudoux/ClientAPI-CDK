@@ -3,6 +3,7 @@ package me.zero.example.mod.mods;
 import me.zero.client.api.event.EventHandler;
 import me.zero.client.api.event.Listener;
 import me.zero.client.api.event.defaults.Render2DEvent;
+import me.zero.client.api.event.type.EventPriority;
 import me.zero.client.api.gui.font.CFontRenderer;
 import me.zero.client.api.module.Mod;
 import me.zero.client.api.module.Module;

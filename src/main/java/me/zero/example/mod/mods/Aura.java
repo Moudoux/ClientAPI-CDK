@@ -1,6 +1,5 @@
 package me.zero.example.mod.mods;
 
-import me.zero.example.mod.category.ICombat;
 import me.zero.client.api.event.EventHandler;
 import me.zero.client.api.event.Listener;
 import me.zero.client.api.event.defaults.MotionUpdateEvent;
@@ -8,6 +7,7 @@ import me.zero.client.api.module.Mod;
 import me.zero.client.api.module.Module;
 import me.zero.client.api.util.EntityUtil;
 import me.zero.client.api.util.math.Vec2;
+import me.zero.example.mod.category.ICombat;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.EnumHand;
