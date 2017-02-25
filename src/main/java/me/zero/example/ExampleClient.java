@@ -22,13 +22,13 @@ public class ExampleClient extends Client {
     @Override
     public void onInit(ClientInfo info) {
         /*
-        AuthenticationFactory.create().username("me.zero.example.example@host.xyz").password("12345").login(); // Login to our account
+        AuthenticationFactory.create().username("example@host.xyz").password("12345").login(); // Login to our account
         */
 
         this.info = info;                                // Gets the client info for later usage
         this.setModuleManager(new ExampleModManager());  // Create Module Manager
         this.getModuleManager();                         // Gets the module manager as a generic Manager<Module>
-        this.getModuleManager(ExampleModManager.class);  // Gets the Module Manager, casted to our implementation
+//        <ExampleModManager>this.getModuleManager();      // Gets the Module Manager, casted to our implementation
         this.loadPlugins("path/to/plugins");             // Load plugins
         this.getModuleManager().load();                  // Load mods
 
@@ -39,7 +39,7 @@ public class ExampleClient extends Client {
 
         // Simple Protocol Hack (Used for connecting to b0at.xyz for testing)
         ProtocolPatcher patcher = new ProtocolPatcher();
-        //patcher.setProtocol(315);
+        patcher.setProtocol(315);
     }
 
     public String getName() {
