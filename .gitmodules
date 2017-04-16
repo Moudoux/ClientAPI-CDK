@@ -1,0 +1,3 @@
+[submodule "src/main"]
+	path = src/main
+	url = https://github.com/ZeroMemes/ClientAPI-Example.git
