@@ -55,7 +55,3 @@ dependencies {
         exclude module: "launchwrapper"
     }
 }
-
-mixin {
-    defaultObfuscationEnv notch
-}
