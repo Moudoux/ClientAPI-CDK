@@ -51,8 +51,13 @@ repositories {
 
 dependencies {
     testCompile 'junit:junit:4.12'
-    compile 'com.github.ZeroMemes:ClientAPI:v2.0'
+    compile('com.github.ZeroMemes:ClientAPI:v2.0') {
+        exclude module: 'mixin'
+    }
     compile('org.spongepowered:mixin:0.6.10-SNAPSHOT') {
         exclude module: 'launchwrapper'
+        exclude module: 'guava'
+        exclude module: 'gson'
+        exclude module: 'commons-io'
     }
 }
