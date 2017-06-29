@@ -5,9 +5,8 @@ Development Kit for the ClientAPI
 
 The setup is the same as any other forgegradle project. The instructions below are for Intellij IDEA, however you can look up instructions for other IDEs.
 
-- Download the CDK
-  - You can use github's download as a zip feature
-  - If you use git instead, ensure you setup the submodules by running `git submodule update --init --recursive`
+- Clone the CDK recursively: `git clone --recursive https://github.com/ZeroMemes/ClientAPI-CDK.git`
+  - You may want to remove our git tracking and setup your own. If so, remove `.git`, `.gitmodules` and `src/main/.git` and then run `git init` to set up your own git repo. _TODO: Add a setup script that does this automatically_
 - Import the project as a gradle project in Intellij
 - Create a run configuration for gradle task `setupDecompWorkspace`
   - Use VM options `-Xmx2g` to assign at least 2GB of ram (4GB recommended)
