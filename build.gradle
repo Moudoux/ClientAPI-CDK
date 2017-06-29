@@ -51,7 +51,7 @@ repositories {
 
 dependencies {
     testCompile 'junit:junit:4.12'
-    compile 'com.github.ZeroMemes:ClientAPI:-SNAPSHOT'
+    compile 'com.github.ZeroMemes:ClientAPI:v1.0'
     compile('org.spongepowered:mixin:0.6.10-SNAPSHOT') {
         exclude module: 'launchwrapper'
     }
